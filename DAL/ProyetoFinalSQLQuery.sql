@@ -1,4 +1,4 @@
-Create DataBase BillEasyDb
+use DataBase BillEasyDb
 
 use BillEasyDb
 
@@ -14,11 +14,11 @@ Email Varchar(100),
 Cedula Varchar(15)
 )
 
-Insert into Clientes(CiudadId,Nombres,Apellidos,Telefono,Celular,Direccion,Email,Cedula) Values(1,'Edwin','Hidalgo','809-234-3433','809-123-3221','Tenares calle Cruz portes esquina Rufino de la cruz # 14','Edwin@gmail.com','0560183232-0')
 
-alter table Productos
- check constraint FK__Productos__Marcas__MarcaId
- alter table  Proveedores NOCHECK constraint ALL 
+
+--alter table Productos
+-- check constraint FK__Productos__Marcas__MarcaId
+ --alter table  Proveedores NOCHECK constraint ALL 
  --sp_helpconstraint Productos
 
 
@@ -43,7 +43,8 @@ Contrasena Varchar(40),
 Area Varchar(100),
 Fecha varchar(10)
 )
-Insert into Usuarios(Nombres,NombreUsuario,Contrasena,Area,Fecha) Values('Juan Perez','Juan24','123456','Master','30-11-2015')
+
+insert into Usuarios(NombreUsuario,Contrasena) values ('Melvin','1234')
 Create Table Ventas(
 VentaId Int Identity Primary Key,
 UsuarioId Int References Usuarios(UsuarioId),
@@ -113,11 +114,11 @@ MarcaId Int Identity Primary Key,
 Nombre Varchar (50)
 )
 
-Insert into Marcas(Nombre) Values('Nike')
+
 
 Create Table Ciudades(
 CiudadId Int Identity Primary Key,
 Nombre Varchar(50),
 CodigoPostal int,
 )
-Insert into Ciudades(Nombre,CodigoPostal) Values('San Francisco',31000)
+
