@@ -1,4 +1,4 @@
-use DataBase BillEasyDb
+create database BillEasyDb
 
 use BillEasyDb
 
@@ -75,8 +75,10 @@ Nombre Varchar(50),
 Cantidad Int,
 Precio Float,
 Costo Float,
-ITBIS Float
+ITBIS Float,
+Descripcion varchar(2000)
 )
+
 
 Create Table Proveedores(
 ProveedorId Int Identity Primary Key,

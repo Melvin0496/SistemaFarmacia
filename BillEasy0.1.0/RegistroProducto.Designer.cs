@@ -45,9 +45,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.CantidadTextBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.DescripcionRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,7 +64,7 @@
             // 
             // ITBISTextBox
             // 
-            this.ITBISTextBox.Location = new System.Drawing.Point(383, 110);
+            this.ITBISTextBox.Location = new System.Drawing.Point(409, 110);
             this.ITBISTextBox.Name = "ITBISTextBox";
             this.ITBISTextBox.Size = new System.Drawing.Size(181, 20);
             this.ITBISTextBox.TabIndex = 7;
@@ -79,7 +81,7 @@
             // 
             // PrecioTextBox
             // 
-            this.PrecioTextBox.Location = new System.Drawing.Point(383, 42);
+            this.PrecioTextBox.Location = new System.Drawing.Point(409, 42);
             this.PrecioTextBox.Name = "PrecioTextBox";
             this.PrecioTextBox.Size = new System.Drawing.Size(181, 20);
             this.PrecioTextBox.TabIndex = 5;
@@ -87,7 +89,7 @@
             // 
             // CostoTextBox
             // 
-            this.CostoTextBox.Location = new System.Drawing.Point(383, 77);
+            this.CostoTextBox.Location = new System.Drawing.Point(409, 77);
             this.CostoTextBox.Name = "CostoTextBox";
             this.CostoTextBox.Size = new System.Drawing.Size(181, 20);
             this.CostoTextBox.TabIndex = 6;
@@ -119,7 +121,7 @@
             // 
             this.GuardarButton.Image = global::BillEasy0._1._0.Properties.Resources._1445977752_Save;
             this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.GuardarButton.Location = new System.Drawing.Point(264, 182);
+            this.GuardarButton.Location = new System.Drawing.Point(167, 188);
             this.GuardarButton.MaximumSize = new System.Drawing.Size(81, 44);
             this.GuardarButton.MinimumSize = new System.Drawing.Size(81, 44);
             this.GuardarButton.Name = "GuardarButton";
@@ -134,7 +136,7 @@
             // 
             this.EliminarButton.Image = global::BillEasy0._1._0.Properties.Resources._1445976510_Delete;
             this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EliminarButton.Location = new System.Drawing.Point(377, 182);
+            this.EliminarButton.Location = new System.Drawing.Point(280, 188);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(79, 44);
             this.EliminarButton.TabIndex = 10;
@@ -147,7 +149,7 @@
             // 
             this.NuevoButton.Image = global::BillEasy0._1._0.Properties.Resources._1445976554_Plus__Orange;
             this.NuevoButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.NuevoButton.Location = new System.Drawing.Point(155, 182);
+            this.NuevoButton.Location = new System.Drawing.Point(58, 188);
             this.NuevoButton.Name = "NuevoButton";
             this.NuevoButton.Size = new System.Drawing.Size(79, 44);
             this.NuevoButton.TabIndex = 8;
@@ -210,6 +212,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.DescripcionRichTextBox);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.CantidadTextBox);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
@@ -230,10 +234,26 @@
             this.groupBox1.Controls.Add(this.BuscarButton);
             this.groupBox1.Location = new System.Drawing.Point(12, 76);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(613, 250);
+            this.groupBox1.Size = new System.Drawing.Size(613, 248);
             this.groupBox1.TabIndex = 82;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Productos";
+            // 
+            // CantidadTextBox
+            // 
+            this.CantidadTextBox.Location = new System.Drawing.Point(123, 144);
+            this.CantidadTextBox.Name = "CantidadTextBox";
+            this.CantidadTextBox.Size = new System.Drawing.Size(181, 20);
+            this.CantidadTextBox.TabIndex = 82;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(16, 147);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.TabIndex = 81;
+            this.label2.Text = "Cantidad:";
             // 
             // label10
             // 
@@ -245,27 +265,28 @@
             this.label10.TabIndex = 83;
             this.label10.Text = "Registro de Productos";
             // 
-            // label2
+            // DescripcionRichTextBox
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 147);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
-            this.label2.TabIndex = 81;
-            this.label2.Text = "Cantidad:";
+            this.DescripcionRichTextBox.Location = new System.Drawing.Point(409, 136);
+            this.DescripcionRichTextBox.Name = "DescripcionRichTextBox";
+            this.DescripcionRichTextBox.Size = new System.Drawing.Size(181, 96);
+            this.DescripcionRichTextBox.TabIndex = 84;
+            this.DescripcionRichTextBox.Text = "";
             // 
-            // CantidadTextBox
+            // label5
             // 
-            this.CantidadTextBox.Location = new System.Drawing.Point(123, 144);
-            this.CantidadTextBox.Name = "CantidadTextBox";
-            this.CantidadTextBox.Size = new System.Drawing.Size(181, 20);
-            this.CantidadTextBox.TabIndex = 82;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(337, 147);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(66, 13);
+            this.label5.TabIndex = 83;
+            this.label5.Text = "Descripcion:";
             // 
             // RegistroProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(639, 334);
+            this.ClientSize = new System.Drawing.Size(639, 332);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.groupBox1);
             this.Name = "RegistroProducto";
@@ -301,5 +322,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox CantidadTextBox;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RichTextBox DescripcionRichTextBox;
+        private System.Windows.Forms.Label label5;
     }
 }
