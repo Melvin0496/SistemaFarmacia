@@ -1,7 +1,7 @@
 Create DataBase BillEasyDb
 
 use BillEasyDb
-
+select * from Usuarios;
 Create Table Clientes(
 ClienteId Int Identity Primary Key,
 CiudadId Int References Ciudades(CiudadId),
@@ -13,6 +13,8 @@ Direccion Varchar(150),
 Email Varchar(100),
 Cedula Varchar(15)
 )
+
+select * from Usuarios
 
 Insert into Clientes(CiudadId,Nombres,Apellidos,Telefono,Celular,Direccion,Email,Cedula) Values(1,'Edwin','Hidalgo','809-234-3433','809-123-3221','Tenares calle Cruz portes esquina Rufino de la cruz # 14','Edwin@gmail.com','0560183232-0')
 

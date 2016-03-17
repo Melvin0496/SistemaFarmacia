@@ -15,7 +15,7 @@ namespace DAL
 
         public ConexionDb()
         {
-            con = new SqlConnection("Data Source = JUNIOR-PC\\ROOT; Initial Catalog = BillEasyDb;Integrated Security = true");
+            con = new SqlConnection("Data Source = SERVERBLACK-PC\\SQLEXPRESS; Initial Catalog = BillEasyDb;Integrated Security = true");
             cmd = new SqlCommand();
         }
 
