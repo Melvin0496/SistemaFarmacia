@@ -36,6 +36,7 @@ namespace BillEasy0._1._0
             producto.Costo = costo;
             producto.Cantidad = cantidad;
             producto.ITBIS = itbis * precio / 100;
+            producto.Descripcion = DescripcionRichTextBox.Text;
         }
 
         private int Validar()
@@ -139,6 +140,7 @@ namespace BillEasy0._1._0
                 CantidadTextBox.Text = producto.Cantidad.ToString();
                 ITBISTextBox.Text = producto.ITBIS.ToString();
                 ProductoIdTextBox.ReadOnly = true;
+                DescripcionRichTextBox.Text = producto.Descripcion;
             }
             else
             {
@@ -155,6 +157,7 @@ namespace BillEasy0._1._0
             ITBISTextBox.Clear();
             CantidadTextBox.Clear();
             ProductoIdTextBox.ReadOnly = false;
+            DescripcionRichTextBox.Clear();
         }
 
         private void GuardarButton_Click(object sender, EventArgs e)

@@ -16,6 +16,7 @@ namespace BLL
         public float Precio { get; set; }
         public float Costo { get; set; }
         public float ITBIS { get; set; }
+        public string Descripcion { get; set; }
         public float Flete { get; set; }
         public float Descuentos { get; set; }
         public float Importe { get; set; }
@@ -29,6 +30,7 @@ namespace BLL
             this.Precio = 0f;
             this.Costo = 0f;
             this.ITBIS = 0f;
+            this.Descripcion = "";
         }
 
         public Productos(int productoId, int marcaId, string nombre, int cantidad, float precio, float costo, float iTBIS)
@@ -67,7 +69,7 @@ namespace BLL
         {
             bool retorno;
             ConexionDb conexion = new ConexionDb();
-            retorno = conexion.Ejecutar(String.Format("Insert Into Productos(MarcaId,Nombre,Cantidad,Precio,Costo,ITBIS) Values({0},'{1}',{2},{3},{4},{5}) ", this.MarcaId, this.Nombre,this.Cantidad, this.Precio, this.Costo, this.ITBIS, this.ProductoId));
+            retorno = conexion.Ejecutar(String.Format("Insert Into Productos(MarcaId,Nombre,Cantidad,Precio,Costo,ITBIS,Descripcion) Values({0},'{1}',{2},{3},{4},{5},'{6}') ", this.MarcaId, this.Nombre,this.Cantidad, this.Precio, this.Costo, this.ITBIS, this.ProductoId,this.Descripcion));
             return retorno;
         }
 
@@ -75,7 +77,7 @@ namespace BLL
         {
             bool retorno;
             ConexionDb conexion = new ConexionDb();
-            retorno = conexion.Ejecutar(String.Format("Update Productos set MarcaId = {0},Nombre  = '{1}',Cantidad = {2},Precio = {3},Costo = {4}, ITBIS = {5} Where ProductoId = {6}" , this.MarcaId, this.Nombre,this.Cantidad, this.Precio, this.Costo, this.ITBIS, this.ProductoId));
+            retorno = conexion.Ejecutar(String.Format("Update Productos set MarcaId = {0},Nombre  = '{1}',Cantidad = {2},Precio = {3},Costo = {4}, ITBIS = {5}, Descripcion = '{6}' Where ProductoId = {7}" , this.MarcaId, this.Nombre,this.Cantidad, this.Precio, this.Costo, this.ITBIS,this.Descripcion,this.ProductoId));
             return retorno;
         }
 
@@ -95,7 +97,7 @@ namespace BLL
         {
             ConexionDb conexion = new ConexionDb();
             DataTable dt = new DataTable();
-            dt = conexion.ObtenerDatos(String.Format("Select ProductoId,MarcaId,Nombre,Cantidad,Precio,Costo,ITBIS From Productos Where ProductoId = {0} ", idBuscado));
+            dt = conexion.ObtenerDatos(String.Format("Select ProductoId,MarcaId,Nombre,Cantidad,Precio,Costo,ITBIS,Descripcion From Productos Where ProductoId = {0} ", idBuscado));
             if (dt.Rows.Count > 0)
             {
                 this.ProductoId = (int)dt.Rows[0]["ProductoId"];
@@ -105,6 +107,8 @@ namespace BLL
                 this.Precio = Convert.ToSingle(dt.Rows[0]["Precio"]);
                 this.Costo = Convert.ToSingle(dt.Rows[0]["Costo"]);
                 this.ITBIS = Convert.ToSingle(dt.Rows[0]["ITBIS"]);
+                this.Descripcion = dt.Rows[0]["Descripcion"].ToString();
+    ;
             }
             return dt.Rows.Count > 0;
         }
