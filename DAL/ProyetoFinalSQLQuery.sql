@@ -15,7 +15,7 @@ Cedula Varchar(15)
 )
 
 
-
+select * from Usuarios
 --alter table Productos
 -- check constraint FK__Productos__Marcas__MarcaId
  --alter table  Proveedores NOCHECK constraint ALL 
