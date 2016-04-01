@@ -93,7 +93,7 @@ namespace BillEasy0._1._0
             {
                 miError.SetError(DireccionTextBox, "");
             }
-            if (TelefonoMaskedTextBox.Text == "")
+            if (TelefonoMaskedTextBox.Text.Length != 14)
             {
                 miError.SetError(TelefonoMaskedTextBox, "Debe llenar el numero de telefono");
                 contador = 1;
@@ -129,7 +129,7 @@ namespace BillEasy0._1._0
             {
                 miError.SetError(NombreRepresentanteTextBox, "");
             }
-            if (CelularMaskedTextBox.Text == "")
+            if (CelularMaskedTextBox.Text.Length != 12)
             {
                 miError.SetError(CelularMaskedTextBox, "Debe llenar el  numero de telefono");
                 contador = 1;

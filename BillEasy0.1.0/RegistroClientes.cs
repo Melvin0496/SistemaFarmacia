@@ -97,7 +97,7 @@ namespace BillEasy0._1._0
             {
                 miError.SetError(ApellidosTextBox, "");
             }
-            if (TelefonomaskedTextBox.Text == "")
+            if (TelefonomaskedTextBox.Text.Length != 14)
             {
                 miError.SetError(TelefonomaskedTextBox, "Debe llenar el numero de telefono");
                 contador = 1;
@@ -106,9 +106,9 @@ namespace BillEasy0._1._0
             {
                 miError.SetError(TelefonomaskedTextBox, "");
             }
-            if (CelularmaskedTextBox.Text == "")
+            if (CelularmaskedTextBox.Text.Length != 12)
             {
-                miError.SetError(CelularmaskedTextBox, "Debe llenar el email");
+                miError.SetError(CelularmaskedTextBox, "Debe llenar el celular");
                 contador = 1;
             }
             else
@@ -133,7 +133,7 @@ namespace BillEasy0._1._0
             {
                 miError.SetError(EmailTextBox, "");
             }
-            if (CedulamaskedTextBox.Text == "")
+            if (CedulamaskedTextBox.Text.Length != 13)
             {
                 miError.SetError(CedulamaskedTextBox, "Debe llenar el  numero de telefono");
                 contador = 1;
