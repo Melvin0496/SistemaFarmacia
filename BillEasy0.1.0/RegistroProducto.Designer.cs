@@ -45,11 +45,17 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.DescripcionRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.CantidadTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.DescripcionRichTextBox = new System.Windows.Forms.RichTextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -161,6 +167,7 @@
             // NombreTextBox
             // 
             this.NombreTextBox.Location = new System.Drawing.Point(123, 112);
+            this.NombreTextBox.MaxLength = 50;
             this.NombreTextBox.Name = "NombreTextBox";
             this.NombreTextBox.Size = new System.Drawing.Size(181, 20);
             this.NombreTextBox.TabIndex = 3;
@@ -212,6 +219,12 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label15);
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.DescripcionRichTextBox);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.CantidadTextBox);
@@ -239,6 +252,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Productos";
             // 
+            // DescripcionRichTextBox
+            // 
+            this.DescripcionRichTextBox.Location = new System.Drawing.Point(409, 136);
+            this.DescripcionRichTextBox.Name = "DescripcionRichTextBox";
+            this.DescripcionRichTextBox.Size = new System.Drawing.Size(181, 96);
+            this.DescripcionRichTextBox.TabIndex = 84;
+            this.DescripcionRichTextBox.Text = "";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(337, 147);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(66, 13);
+            this.label5.TabIndex = 83;
+            this.label5.Text = "Descripcion:";
+            // 
             // CantidadTextBox
             // 
             this.CantidadTextBox.Location = new System.Drawing.Point(123, 144);
@@ -265,22 +295,65 @@
             this.label10.TabIndex = 83;
             this.label10.Text = "Registro de Productos";
             // 
-            // DescripcionRichTextBox
+            // label9
             // 
-            this.DescripcionRichTextBox.Location = new System.Drawing.Point(409, 136);
-            this.DescripcionRichTextBox.Name = "DescripcionRichTextBox";
-            this.DescripcionRichTextBox.Size = new System.Drawing.Size(181, 96);
-            this.DescripcionRichTextBox.TabIndex = 84;
-            this.DescripcionRichTextBox.Text = "";
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(310, 147);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(11, 13);
+            this.label9.TabIndex = 84;
+            this.label9.Text = "*";
             // 
-            // label5
+            // label11
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(337, 147);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 13);
-            this.label5.TabIndex = 83;
-            this.label5.Text = "Descripcion:";
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(301, 118);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(11, 13);
+            this.label11.TabIndex = 85;
+            this.label11.Text = "*";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.Color.Red;
+            this.label12.Location = new System.Drawing.Point(596, 49);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(11, 13);
+            this.label12.TabIndex = 86;
+            this.label12.Text = "*";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.Color.Red;
+            this.label13.Location = new System.Drawing.Point(596, 80);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(11, 13);
+            this.label13.TabIndex = 87;
+            this.label13.Text = "*";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.ForeColor = System.Drawing.Color.Red;
+            this.label14.Location = new System.Drawing.Point(596, 118);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(11, 13);
+            this.label14.TabIndex = 88;
+            this.label14.Text = "*";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.ForeColor = System.Drawing.Color.Red;
+            this.label15.Location = new System.Drawing.Point(596, 178);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(11, 13);
+            this.label15.TabIndex = 89;
+            this.label15.Text = "*";
             // 
             // RegistroProducto
             // 
@@ -324,5 +397,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RichTextBox DescripcionRichTextBox;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
     }
 }

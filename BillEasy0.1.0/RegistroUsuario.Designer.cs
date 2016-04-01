@@ -45,6 +45,10 @@
             this.EliminarButton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
@@ -115,6 +119,7 @@
             // NombreTextBox
             // 
             this.NombreTextBox.Location = new System.Drawing.Point(113, 61);
+            this.NombreTextBox.MaxLength = 50;
             this.NombreTextBox.Name = "NombreTextBox";
             this.NombreTextBox.Size = new System.Drawing.Size(191, 20);
             this.NombreTextBox.TabIndex = 1;
@@ -123,6 +128,7 @@
             // NombreUsuarioTextBox
             // 
             this.NombreUsuarioTextBox.Location = new System.Drawing.Point(113, 100);
+            this.NombreUsuarioTextBox.MaxLength = 50;
             this.NombreUsuarioTextBox.Name = "NombreUsuarioTextBox";
             this.NombreUsuarioTextBox.Size = new System.Drawing.Size(191, 20);
             this.NombreUsuarioTextBox.TabIndex = 2;
@@ -130,13 +136,16 @@
             // ContrasenaTextBox
             // 
             this.ContrasenaTextBox.Location = new System.Drawing.Point(113, 132);
+            this.ContrasenaTextBox.MaxLength = 40;
             this.ContrasenaTextBox.Name = "ContrasenaTextBox";
             this.ContrasenaTextBox.Size = new System.Drawing.Size(191, 20);
             this.ContrasenaTextBox.TabIndex = 3;
+            this.ContrasenaTextBox.UseSystemPasswordChar = true;
             // 
             // AreaTextBox
             // 
             this.AreaTextBox.Location = new System.Drawing.Point(113, 165);
+            this.AreaTextBox.MaxLength = 100;
             this.AreaTextBox.Name = "AreaTextBox";
             this.AreaTextBox.Size = new System.Drawing.Size(191, 20);
             this.AreaTextBox.TabIndex = 4;
@@ -197,6 +206,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.FechadateTimePicker);
             this.groupBox1.Controls.Add(this.UsuarioIdTextBox);
             this.groupBox1.Controls.Add(this.BuscarButton);
@@ -219,6 +232,46 @@
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Usuarios";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(321, 172);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(11, 13);
+            this.label11.TabIndex = 36;
+            this.label11.Text = "*";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.Location = new System.Drawing.Point(321, 135);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(11, 13);
+            this.label10.TabIndex = 35;
+            this.label10.Text = "*";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(321, 100);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(11, 13);
+            this.label9.TabIndex = 34;
+            this.label9.Text = "*";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.Location = new System.Drawing.Point(321, 64);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(11, 13);
+            this.label8.TabIndex = 33;
+            this.label8.Text = "*";
             // 
             // FechadateTimePicker
             // 
@@ -280,5 +333,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker FechadateTimePicker;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
     }
 }

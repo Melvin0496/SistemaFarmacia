@@ -52,6 +52,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.CelularMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.TelefonoMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,6 +72,7 @@
             // EmailTextBox
             // 
             this.EmailTextBox.Location = new System.Drawing.Point(414, 31);
+            this.EmailTextBox.MaxLength = 50;
             this.EmailTextBox.Name = "EmailTextBox";
             this.EmailTextBox.Size = new System.Drawing.Size(181, 20);
             this.EmailTextBox.TabIndex = 5;
@@ -82,6 +88,7 @@
             // RNCTextBox
             // 
             this.RNCTextBox.Location = new System.Drawing.Point(414, 67);
+            this.RNCTextBox.MaxLength = 20;
             this.RNCTextBox.Name = "RNCTextBox";
             this.RNCTextBox.Size = new System.Drawing.Size(181, 20);
             this.RNCTextBox.TabIndex = 6;
@@ -170,6 +177,7 @@
             // DireccionTextBox
             // 
             this.DireccionTextBox.Location = new System.Drawing.Point(112, 138);
+            this.DireccionTextBox.MaxLength = 150;
             this.DireccionTextBox.Name = "DireccionTextBox";
             this.DireccionTextBox.Size = new System.Drawing.Size(181, 20);
             this.DireccionTextBox.TabIndex = 3;
@@ -177,6 +185,7 @@
             // NombreEmpresaTextBox
             // 
             this.NombreEmpresaTextBox.Location = new System.Drawing.Point(112, 103);
+            this.NombreEmpresaTextBox.MaxLength = 70;
             this.NombreEmpresaTextBox.Name = "NombreEmpresaTextBox";
             this.NombreEmpresaTextBox.Size = new System.Drawing.Size(181, 20);
             this.NombreEmpresaTextBox.TabIndex = 2;
@@ -256,6 +265,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label15);
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.CelularMaskedTextBox);
             this.groupBox1.Controls.Add(this.TelefonoMaskedTextBox);
             this.groupBox1.Controls.Add(this.label1);
@@ -301,6 +315,56 @@
             this.TelefonoMaskedTextBox.Size = new System.Drawing.Size(181, 20);
             this.TelefonoMaskedTextBox.TabIndex = 58;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(299, 110);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(11, 13);
+            this.label11.TabIndex = 60;
+            this.label11.Text = "*";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.Color.Red;
+            this.label12.Location = new System.Drawing.Point(299, 141);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(11, 13);
+            this.label12.TabIndex = 61;
+            this.label12.Text = "*";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.Color.Red;
+            this.label13.Location = new System.Drawing.Point(601, 34);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(11, 13);
+            this.label13.TabIndex = 62;
+            this.label13.Text = "*";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.ForeColor = System.Drawing.Color.Red;
+            this.label14.Location = new System.Drawing.Point(601, 67);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(11, 13);
+            this.label14.TabIndex = 63;
+            this.label14.Text = "*";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.ForeColor = System.Drawing.Color.Red;
+            this.label15.Location = new System.Drawing.Point(601, 110);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(11, 13);
+            this.label15.TabIndex = 64;
+            this.label15.Text = "*";
+            // 
             // RegistroProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -345,5 +409,10 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.MaskedTextBox CelularMaskedTextBox;
         private System.Windows.Forms.MaskedTextBox TelefonoMaskedTextBox;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
     }
 }

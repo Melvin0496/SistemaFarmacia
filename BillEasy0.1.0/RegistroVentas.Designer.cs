@@ -71,6 +71,10 @@
             this.NuevoButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.DatosVentasgroupBox.SuspendLayout();
             this.ProductogroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VentasdataGridView)).BeginInit();
@@ -78,6 +82,8 @@
             // 
             // DatosVentasgroupBox
             // 
+            this.DatosVentasgroupBox.Controls.Add(this.label18);
+            this.DatosVentasgroupBox.Controls.Add(this.label17);
             this.DatosVentasgroupBox.Controls.Add(this.TipoVentaComboBox);
             this.DatosVentasgroupBox.Controls.Add(this.BuscarVentaButton);
             this.DatosVentasgroupBox.Controls.Add(this.ProductogroupBox);
@@ -124,6 +130,8 @@
             // 
             // ProductogroupBox
             // 
+            this.ProductogroupBox.Controls.Add(this.label16);
+            this.ProductogroupBox.Controls.Add(this.label15);
             this.ProductogroupBox.Controls.Add(this.AgregarButton);
             this.ProductogroupBox.Controls.Add(this.NombreTextBox);
             this.ProductogroupBox.Controls.Add(this.ITBISTextBox);
@@ -182,7 +190,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(461, 29);
+            this.label13.Location = new System.Drawing.Point(477, 29);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(37, 13);
             this.label13.TabIndex = 16;
@@ -270,7 +278,7 @@
             // 
             this.FechadateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechadateTimePicker.Location = new System.Drawing.Point(537, 20);
+            this.FechadateTimePicker.Location = new System.Drawing.Point(553, 23);
             this.FechadateTimePicker.Name = "FechadateTimePicker";
             this.FechadateTimePicker.Size = new System.Drawing.Size(143, 20);
             this.FechadateTimePicker.TabIndex = 20;
@@ -278,7 +286,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(461, 26);
+            this.label10.Location = new System.Drawing.Point(477, 23);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(40, 13);
             this.label10.TabIndex = 19;
@@ -349,7 +357,8 @@
             // 
             // TipoNFCTextBox
             // 
-            this.TipoNFCTextBox.Location = new System.Drawing.Point(537, 56);
+            this.TipoNFCTextBox.Location = new System.Drawing.Point(553, 53);
+            this.TipoNFCTextBox.MaxLength = 20;
             this.TipoNFCTextBox.Name = "TipoNFCTextBox";
             this.TipoNFCTextBox.Size = new System.Drawing.Size(143, 20);
             this.TipoNFCTextBox.TabIndex = 5;
@@ -357,6 +366,7 @@
             // NFCTextBox
             // 
             this.NFCTextBox.Location = new System.Drawing.Point(311, 56);
+            this.NFCTextBox.MaxLength = 20;
             this.NFCTextBox.Name = "NFCTextBox";
             this.NFCTextBox.Size = new System.Drawing.Size(143, 20);
             this.NFCTextBox.TabIndex = 4;
@@ -372,7 +382,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(461, 59);
+            this.label6.Location = new System.Drawing.Point(477, 56);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(70, 13);
             this.label6.TabIndex = 5;
@@ -480,6 +490,46 @@
             this.EliminarButton.UseVisualStyleBackColor = true;
             this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.ForeColor = System.Drawing.Color.Red;
+            this.label15.Location = new System.Drawing.Point(460, 29);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(11, 13);
+            this.label15.TabIndex = 33;
+            this.label15.Text = "*";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.ForeColor = System.Drawing.Color.Red;
+            this.label16.Location = new System.Drawing.Point(686, 61);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(11, 13);
+            this.label16.TabIndex = 34;
+            this.label16.Text = "*";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.ForeColor = System.Drawing.Color.Red;
+            this.label17.Location = new System.Drawing.Point(702, 61);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(11, 13);
+            this.label17.TabIndex = 35;
+            this.label17.Text = "*";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.ForeColor = System.Drawing.Color.Red;
+            this.label18.Location = new System.Drawing.Point(460, 59);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(11, 13);
+            this.label18.TabIndex = 36;
+            this.label18.Text = "*";
+            // 
             // RegistroVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -555,5 +605,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Descuento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Importe;
         private System.Windows.Forms.ComboBox TipoVentaComboBox;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
     }
 }
