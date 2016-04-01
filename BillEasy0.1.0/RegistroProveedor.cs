@@ -93,7 +93,7 @@ namespace BillEasy0._1._0
             {
                 miError.SetError(DireccionTextBox, "");
             }
-            if (TelefonoMaskedTextBox.Text.Length != 14)
+            if (TelefonoMaskedTextBox.Text.Length != 13)
             {
                 miError.SetError(TelefonoMaskedTextBox, "Debe llenar el numero de telefono");
                 contador = 1;
