@@ -16,6 +16,8 @@ Cedula Varchar(15)
 
 select * from Usuarios
 
+Insert into Usuarios(NombreUsuario,Contrasena) values('Melvin0496','1234')
+
 Insert into Clientes(CiudadId,Nombres,Apellidos,Telefono,Celular,Direccion,Email,Cedula) Values(1,'Edwin','Hidalgo','809-234-3433','809-123-3221','Tenares calle Cruz portes esquina Rufino de la cruz # 14','Edwin@gmail.com','0560183232-0')
 
 

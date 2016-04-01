@@ -38,6 +38,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -98,6 +99,7 @@
             // NombreTextBox
             // 
             this.NombreTextBox.Location = new System.Drawing.Point(113, 64);
+            this.NombreTextBox.MaxLength = 50;
             this.NombreTextBox.Name = "NombreTextBox";
             this.NombreTextBox.Size = new System.Drawing.Size(191, 20);
             this.NombreTextBox.TabIndex = 1;
@@ -131,6 +133,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.GuardarButton);
             this.groupBox1.Controls.Add(this.BuscarButton);
@@ -155,6 +158,16 @@
             this.label10.Size = new System.Drawing.Size(223, 36);
             this.label10.TabIndex = 33;
             this.label10.Text = "Registro de marcas";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(310, 67);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(11, 13);
+            this.label4.TabIndex = 33;
+            this.label4.Text = "*";
             // 
             // RegistroMarca
             // 
@@ -185,5 +198,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label4;
     }
 }

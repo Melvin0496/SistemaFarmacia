@@ -33,9 +33,12 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.DatosVentasGroupBox = new System.Windows.Forms.GroupBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.TipoDeCompraComboBox = new System.Windows.Forms.ComboBox();
             this.BuscarCompraButton = new System.Windows.Forms.Button();
             this.ProductoGroupBox = new System.Windows.Forms.GroupBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.AgregarButton = new System.Windows.Forms.Button();
             this.NombreTextBox = new System.Windows.Forms.TextBox();
             this.ITBISTextBox = new System.Windows.Forms.TextBox();
@@ -72,6 +75,7 @@
             this.GuardarButton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
             this.ErrorerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label18 = new System.Windows.Forms.Label();
             this.DatosVentasGroupBox.SuspendLayout();
             this.ProductoGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CompraDataGridView)).BeginInit();
@@ -107,6 +111,8 @@
             // 
             // DatosVentasGroupBox
             // 
+            this.DatosVentasGroupBox.Controls.Add(this.label16);
+            this.DatosVentasGroupBox.Controls.Add(this.label15);
             this.DatosVentasGroupBox.Controls.Add(this.TipoDeCompraComboBox);
             this.DatosVentasGroupBox.Controls.Add(this.BuscarCompraButton);
             this.DatosVentasGroupBox.Controls.Add(this.ProductoGroupBox);
@@ -128,6 +134,26 @@
             this.DatosVentasGroupBox.TabIndex = 21;
             this.DatosVentasGroupBox.TabStop = false;
             this.DatosVentasGroupBox.Text = "Datos Compras";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.ForeColor = System.Drawing.Color.Red;
+            this.label16.Location = new System.Drawing.Point(703, 68);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(11, 13);
+            this.label16.TabIndex = 34;
+            this.label16.Text = "*";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.ForeColor = System.Drawing.Color.Red;
+            this.label15.Location = new System.Drawing.Point(461, 68);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(11, 13);
+            this.label15.TabIndex = 33;
+            this.label15.Text = "*";
             // 
             // TipoDeCompraComboBox
             // 
@@ -153,6 +179,8 @@
             // 
             // ProductoGroupBox
             // 
+            this.ProductoGroupBox.Controls.Add(this.label18);
+            this.ProductoGroupBox.Controls.Add(this.label17);
             this.ProductoGroupBox.Controls.Add(this.AgregarButton);
             this.ProductoGroupBox.Controls.Add(this.NombreTextBox);
             this.ProductoGroupBox.Controls.Add(this.ITBISTextBox);
@@ -172,6 +200,16 @@
             this.ProductoGroupBox.Size = new System.Drawing.Size(711, 100);
             this.ProductoGroupBox.TabIndex = 21;
             this.ProductoGroupBox.TabStop = false;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.ForeColor = System.Drawing.Color.Red;
+            this.label17.Location = new System.Drawing.Point(452, 29);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(11, 13);
+            this.label17.TabIndex = 35;
+            this.label17.Text = "*";
             // 
             // AgregarButton
             // 
@@ -211,7 +249,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(452, 30);
+            this.label13.Location = new System.Drawing.Point(469, 30);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(37, 13);
             this.label13.TabIndex = 16;
@@ -299,7 +337,7 @@
             // 
             this.FechaDateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.FechaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechaDateTimePicker.Location = new System.Drawing.Point(537, 32);
+            this.FechaDateTimePicker.Location = new System.Drawing.Point(554, 29);
             this.FechaDateTimePicker.Name = "FechaDateTimePicker";
             this.FechaDateTimePicker.Size = new System.Drawing.Size(143, 20);
             this.FechaDateTimePicker.TabIndex = 4;
@@ -371,7 +409,8 @@
             // 
             // TipoNFCTextBox
             // 
-            this.TipoNFCTextBox.Location = new System.Drawing.Point(537, 65);
+            this.TipoNFCTextBox.Location = new System.Drawing.Point(554, 65);
+            this.TipoNFCTextBox.MaxLength = 20;
             this.TipoNFCTextBox.Name = "TipoNFCTextBox";
             this.TipoNFCTextBox.Size = new System.Drawing.Size(143, 20);
             this.TipoNFCTextBox.TabIndex = 5;
@@ -379,6 +418,7 @@
             // NFCTextBox
             // 
             this.NFCTextBox.Location = new System.Drawing.Point(312, 65);
+            this.NFCTextBox.MaxLength = 20;
             this.NFCTextBox.Name = "NFCTextBox";
             this.NFCTextBox.Size = new System.Drawing.Size(143, 20);
             this.NFCTextBox.TabIndex = 3;
@@ -394,7 +434,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(461, 68);
+            this.label6.Location = new System.Drawing.Point(478, 68);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(70, 13);
             this.label6.TabIndex = 5;
@@ -479,6 +519,16 @@
             // 
             this.ErrorerrorProvider.ContainerControl = this;
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.ForeColor = System.Drawing.Color.Red;
+            this.label18.Location = new System.Drawing.Point(677, 57);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(11, 13);
+            this.label18.TabIndex = 36;
+            this.label18.Text = "*";
+            // 
             // RegistroCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -551,5 +601,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Importe;
         private System.Windows.Forms.ErrorProvider ErrorerrorProvider;
         private System.Windows.Forms.ComboBox TipoDeCompraComboBox;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
     }
 }

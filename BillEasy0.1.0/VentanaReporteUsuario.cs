@@ -19,9 +19,7 @@ namespace BillEasy0._1._0
 
         private void VentanaReporteUsuario_Load(object sender, EventArgs e)
         {
-            ReporteUsuario usuario = new ReporteUsuario();
-            UsuarioCrystalReportViewer.ReportSource = usuario;
-            UsuarioCrystalReportViewer.RefreshReport();
+            
         }
     }
 }
