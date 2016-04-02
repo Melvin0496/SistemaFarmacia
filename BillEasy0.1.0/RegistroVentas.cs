@@ -100,6 +100,12 @@ namespace BillEasy0._1._0
             BuscarVentaButton.Enabled = true;
         }
 
+        private void VisibleButtonEliminar()
+        {
+            if ((VentaIdTextBox.Text != "")) EliminarButton.Enabled = true;
+            else EliminarButton.Enabled = false;
+        }
+
         private void RegistroVentas_Load(object sender, EventArgs e)
         {
             Clientes cliente = new Clientes();
@@ -108,6 +114,7 @@ namespace BillEasy0._1._0
             ClientecomboBox.DisplayMember = "Nombres";
             ClientecomboBox.ValueMember = "ClienteId";
 
+            VisibleButtonEliminar();
         }
         public int Convertir()
         {
@@ -315,5 +322,10 @@ namespace BillEasy0._1._0
             miError.Clear();
         }
 
+        private void VentaIdTextBox_TextChanged(object sender, EventArgs e)
+        {
+            VisibleButtonEliminar();
+        }
+        
     }
 }

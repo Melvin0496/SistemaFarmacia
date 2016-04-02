@@ -29,9 +29,13 @@
         private void InitializeComponent()
         {
             this.DatosVentasgroupBox = new System.Windows.Forms.GroupBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.TipoVentaComboBox = new System.Windows.Forms.ComboBox();
             this.BuscarVentaButton = new System.Windows.Forms.Button();
             this.ProductogroupBox = new System.Windows.Forms.GroupBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.AgregarButton = new System.Windows.Forms.Button();
             this.NombreTextBox = new System.Windows.Forms.TextBox();
             this.ITBISTextBox = new System.Windows.Forms.TextBox();
@@ -49,13 +53,6 @@
             this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
             this.VentasdataGridView = new System.Windows.Forms.DataGridView();
-            this.ProductoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ITBIS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClientecomboBox = new System.Windows.Forms.ComboBox();
             this.TipoNFCTextBox = new System.Windows.Forms.TextBox();
             this.NFCTextBox = new System.Windows.Forms.TextBox();
@@ -71,10 +68,13 @@
             this.NuevoButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.ProductoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ITBIS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DatosVentasgroupBox.SuspendLayout();
             this.ProductogroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VentasdataGridView)).BeginInit();
@@ -105,6 +105,26 @@
             this.DatosVentasgroupBox.TabIndex = 0;
             this.DatosVentasgroupBox.TabStop = false;
             this.DatosVentasgroupBox.Text = "Datos Ventas";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.ForeColor = System.Drawing.Color.Red;
+            this.label18.Location = new System.Drawing.Point(460, 59);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(11, 13);
+            this.label18.TabIndex = 36;
+            this.label18.Text = "*";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.ForeColor = System.Drawing.Color.Red;
+            this.label17.Location = new System.Drawing.Point(702, 61);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(11, 13);
+            this.label17.TabIndex = 35;
+            this.label17.Text = "*";
             // 
             // TipoVentaComboBox
             // 
@@ -151,6 +171,26 @@
             this.ProductogroupBox.Size = new System.Drawing.Size(720, 100);
             this.ProductogroupBox.TabIndex = 21;
             this.ProductogroupBox.TabStop = false;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.ForeColor = System.Drawing.Color.Red;
+            this.label16.Location = new System.Drawing.Point(686, 61);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(11, 13);
+            this.label16.TabIndex = 34;
+            this.label16.Text = "*";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.ForeColor = System.Drawing.Color.Red;
+            this.label15.Location = new System.Drawing.Point(460, 29);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(11, 13);
+            this.label15.TabIndex = 33;
+            this.label15.Text = "*";
             // 
             // AgregarButton
             // 
@@ -310,42 +350,6 @@
             this.VentasdataGridView.Size = new System.Drawing.Size(708, 134);
             this.VentasdataGridView.TabIndex = 18;
             // 
-            // ProductoId
-            // 
-            this.ProductoId.HeaderText = "ProductoId";
-            this.ProductoId.Name = "ProductoId";
-            this.ProductoId.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            // 
-            // ITBIS
-            // 
-            this.ITBIS.HeaderText = "ITBIS";
-            this.ITBIS.Name = "ITBIS";
-            // 
-            // Descuento
-            // 
-            this.Descuento.HeaderText = "Descuento";
-            this.Descuento.Name = "Descuento";
-            // 
-            // Importe
-            // 
-            this.Importe.HeaderText = "Importe";
-            this.Importe.Name = "Importe";
-            // 
             // ClientecomboBox
             // 
             this.ClientecomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -377,6 +381,7 @@
             this.VentaIdTextBox.Name = "VentaIdTextBox";
             this.VentaIdTextBox.Size = new System.Drawing.Size(91, 20);
             this.VentaIdTextBox.TabIndex = 1;
+            this.VentaIdTextBox.TextChanged += new System.EventHandler(this.VentaIdTextBox_TextChanged);
             this.VentaIdTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.VentaIdtextBox_KeyPress);
             // 
             // label6
@@ -490,45 +495,42 @@
             this.EliminarButton.UseVisualStyleBackColor = true;
             this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
             // 
-            // label15
+            // ProductoId
             // 
-            this.label15.AutoSize = true;
-            this.label15.ForeColor = System.Drawing.Color.Red;
-            this.label15.Location = new System.Drawing.Point(460, 29);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(11, 13);
-            this.label15.TabIndex = 33;
-            this.label15.Text = "*";
+            this.ProductoId.HeaderText = "ProductoId";
+            this.ProductoId.Name = "ProductoId";
+            this.ProductoId.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
-            // label16
+            // Nombre
             // 
-            this.label16.AutoSize = true;
-            this.label16.ForeColor = System.Drawing.Color.Red;
-            this.label16.Location = new System.Drawing.Point(686, 61);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(11, 13);
-            this.label16.TabIndex = 34;
-            this.label16.Text = "*";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
             // 
-            // label17
+            // Cantidad
             // 
-            this.label17.AutoSize = true;
-            this.label17.ForeColor = System.Drawing.Color.Red;
-            this.label17.Location = new System.Drawing.Point(702, 61);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(11, 13);
-            this.label17.TabIndex = 35;
-            this.label17.Text = "*";
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
             // 
-            // label18
+            // Precio
             // 
-            this.label18.AutoSize = true;
-            this.label18.ForeColor = System.Drawing.Color.Red;
-            this.label18.Location = new System.Drawing.Point(460, 59);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(11, 13);
-            this.label18.TabIndex = 36;
-            this.label18.Text = "*";
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            // 
+            // ITBIS
+            // 
+            this.ITBIS.HeaderText = "ITBIS";
+            this.ITBIS.Name = "ITBIS";
+            // 
+            // Descuento
+            // 
+            this.Descuento.HeaderText = "Descuento";
+            this.Descuento.Name = "Descuento";
+            // 
+            // Importe
+            // 
+            this.Importe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Importe.HeaderText = "Importe";
+            this.Importe.Name = "Importe";
             // 
             // RegistroVentas
             // 
@@ -597,17 +599,17 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button AgregarButton;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProductoId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ITBIS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descuento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Importe;
         private System.Windows.Forms.ComboBox TipoVentaComboBox;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Importe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descuento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ITBIS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductoId;
     }
 }

@@ -117,6 +117,12 @@ namespace BillEasy0._1._0
             return id;
         }
 
+        private void VisibleButtonEliminar()
+        {
+            if ((ProductoIdTextBox.Text != "")) EliminarButton.Enabled = true;
+            else EliminarButton.Enabled = false;
+        }
+
         private void RegistroProducto_Load(object sender, EventArgs e)
         {
             Marcas marca = new Marcas();
@@ -125,6 +131,7 @@ namespace BillEasy0._1._0
             MarcaComboBox.DisplayMember = "Nombre";
             MarcaComboBox.ValueMember = "MarcaId";
 
+            VisibleButtonEliminar();
         }
 
         private void BuscarButton_Click(object sender, EventArgs e)
@@ -316,6 +323,11 @@ namespace BillEasy0._1._0
             {
                 miError.SetError(ITBISTextBox, "");
             }
+        }
+
+        private void ProductoIdTextBox_TextChanged(object sender, EventArgs e)
+        {
+            VisibleButtonEliminar();
         }
     }
 }

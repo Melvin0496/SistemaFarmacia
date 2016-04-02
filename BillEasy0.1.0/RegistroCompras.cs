@@ -120,6 +120,12 @@ namespace BillEasy0._1._0
             }
         }
 
+        private void VisibleButtonEliminar()
+        {
+            if ((ProductoIdTextBox.Text != "")) EliminarButton.Enabled = true;
+            else EliminarButton.Enabled = false;
+        }
+
         private void RegistroCompras_Load(object sender, EventArgs e)
         {
             Proveedores proveedor = new Proveedores();
@@ -127,6 +133,8 @@ namespace BillEasy0._1._0
             ProveedorComboBox.DataSource = proveedor.Listado("*", "1=1", "");
             ProveedorComboBox.DisplayMember = "NombreEmpresa";
             ProveedorComboBox.ValueMember = "ProveedorId";
+
+            VisibleButtonEliminar();
         }
         double monto;
         public int Convertir()
@@ -316,6 +324,9 @@ namespace BillEasy0._1._0
             }
         }
 
-      
+        private void CompraIdTextBox_TextChanged(object sender, EventArgs e)
+        {
+            VisibleButtonEliminar();
+        }
     }
 }

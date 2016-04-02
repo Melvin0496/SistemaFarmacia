@@ -114,6 +114,7 @@
             this.UsuarioIdTextBox.Name = "UsuarioIdTextBox";
             this.UsuarioIdTextBox.Size = new System.Drawing.Size(111, 20);
             this.UsuarioIdTextBox.TabIndex = 0;
+            this.UsuarioIdTextBox.TextChanged += new System.EventHandler(this.UsuarioIdTextBox_TextChanged);
             this.UsuarioIdTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.UsuarioIdTextBox_KeyPress);
             // 
             // NombreTextBox
@@ -152,7 +153,6 @@
             // 
             // BuscarButton
             // 
-            this.BuscarButton.Enabled = false;
             this.BuscarButton.Image = global::BillEasy0._1._0.Properties.Resources._1443839488_file_search;
             this.BuscarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BuscarButton.Location = new System.Drawing.Point(230, 13);
@@ -307,6 +307,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro de usuarios";
             this.TransparencyKey = System.Drawing.Color.MintCream;
+            this.Load += new System.EventHandler(this.RegistroUsuario_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

@@ -153,12 +153,20 @@ namespace BillEasy0._1._0
             return id;
         }
 
+        private void VisibleButtonEliminar()
+        {
+            if ((ClienteIdtextBox.Text != "")) EliminarButton.Enabled = true;
+            else EliminarButton.Enabled = false;
+        }
+
         private void RegistroClientes_Load(object sender, EventArgs e)
         {
             Ciudades ciudades = new Ciudades();
             CiudadComboBox.DataSource = ciudades.Listado("CiudadId,Nombre,CodigoPostal ", "1=1", "");
             CiudadComboBox.DisplayMember = string.Format("Nombre");
             CiudadComboBox.ValueMember = "CiudadId";
+
+            VisibleButtonEliminar();
         }
 
         private void BuscarButton_Click(object sender, EventArgs e)
@@ -289,6 +297,11 @@ namespace BillEasy0._1._0
             {
                 miError.SetError(ApellidosTextBox, "");
             }
+        }
+
+        private void ClienteIdtextBox_TextChanged(object sender, EventArgs e)
+        {
+            VisibleButtonEliminar();
         }
     }
 }

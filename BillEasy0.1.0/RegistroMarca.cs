@@ -172,5 +172,21 @@ namespace BillEasy0._1._0
                 miError.SetError(NombreTextBox, "");
             }
         }
+
+        private void VisibleButtonEliminar()
+        {
+            if ((MarcaIdTextBox.Text != "")) EliminarButton.Enabled = true;
+            else EliminarButton.Enabled = false;
+        }
+
+        private void RegistroMarca_Load(object sender, EventArgs e)
+        {
+            VisibleButtonEliminar();
+        }
+
+        private void MarcaIdTextBox_TextChanged(object sender, EventArgs e)
+        {
+            VisibleButtonEliminar();
+        }
     }
 }

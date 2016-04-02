@@ -38,6 +38,7 @@
             this.TipoDeCompraComboBox = new System.Windows.Forms.ComboBox();
             this.BuscarCompraButton = new System.Windows.Forms.Button();
             this.ProductoGroupBox = new System.Windows.Forms.GroupBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.AgregarButton = new System.Windows.Forms.Button();
             this.NombreTextBox = new System.Windows.Forms.TextBox();
@@ -75,7 +76,6 @@
             this.GuardarButton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
             this.ErrorerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label18 = new System.Windows.Forms.Label();
             this.DatosVentasGroupBox.SuspendLayout();
             this.ProductoGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CompraDataGridView)).BeginInit();
@@ -200,6 +200,16 @@
             this.ProductoGroupBox.Size = new System.Drawing.Size(711, 100);
             this.ProductoGroupBox.TabIndex = 21;
             this.ProductoGroupBox.TabStop = false;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.ForeColor = System.Drawing.Color.Red;
+            this.label18.Location = new System.Drawing.Point(677, 57);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(11, 13);
+            this.label18.TabIndex = 36;
+            this.label18.Text = "*";
             // 
             // label17
             // 
@@ -429,6 +439,7 @@
             this.CompraIdTextBox.Name = "CompraIdTextBox";
             this.CompraIdTextBox.Size = new System.Drawing.Size(91, 20);
             this.CompraIdTextBox.TabIndex = 0;
+            this.CompraIdTextBox.TextChanged += new System.EventHandler(this.CompraIdTextBox_TextChanged);
             this.CompraIdTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CompraIdTextBox_KeyPress);
             // 
             // label6
@@ -518,16 +529,6 @@
             // ErrorerrorProvider
             // 
             this.ErrorerrorProvider.ContainerControl = this;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.ForeColor = System.Drawing.Color.Red;
-            this.label18.Location = new System.Drawing.Point(677, 57);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(11, 13);
-            this.label18.TabIndex = 36;
-            this.label18.Text = "*";
             // 
             // RegistroCompras
             // 

@@ -196,5 +196,19 @@ namespace BillEasy0._1._0
                 miError.SetError(NombreTextBox, "");
             }
         }
+        private void UsuarioIdTextBox_TextChanged(object sender, EventArgs e)
+        {
+            VisibleButtonEliminar();
+        }
+        private void RegistroUsuario_Load(object sender, EventArgs e)
+        {
+            VisibleButtonEliminar();
+        }
+
+        private void VisibleButtonEliminar()
+        {
+            if ((UsuarioIdTextBox.Text != "")) EliminarButton.Enabled = true;
+            else EliminarButton.Enabled = false;
+        }
     }
 }

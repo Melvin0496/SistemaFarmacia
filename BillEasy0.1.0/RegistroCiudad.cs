@@ -208,5 +208,21 @@ namespace BillEasy0._1._0
                 miError.SetError(CodigoPostalTextBox, "");
             }
         }
+
+        private void VisibleButtonEliminar()
+        {
+            if ((CiudadIdTextBox.Text != "")) EliminarButton.Enabled = true;
+            else EliminarButton.Enabled = false;
+        }
+
+        private void RegistroCiudad_Load(object sender, EventArgs e)
+        {
+            VisibleButtonEliminar();
+        }
+
+        private void CiudadIdTextBox_TextChanged(object sender, EventArgs e)
+        {
+            VisibleButtonEliminar();
+        }
     }
 }
