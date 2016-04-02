@@ -152,6 +152,7 @@
             // 
             // BuscarButton
             // 
+            this.BuscarButton.Enabled = false;
             this.BuscarButton.Image = global::BillEasy0._1._0.Properties.Resources._1443839488_file_search;
             this.BuscarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BuscarButton.Location = new System.Drawing.Point(230, 13);
