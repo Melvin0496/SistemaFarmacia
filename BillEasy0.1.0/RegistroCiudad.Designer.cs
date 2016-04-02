@@ -36,18 +36,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.BuscarButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // CodigoPostalTextBox
             // 
             this.CodigoPostalTextBox.Location = new System.Drawing.Point(87, 109);
+            this.CodigoPostalTextBox.MaxLength = 6;
             this.CodigoPostalTextBox.Name = "CodigoPostalTextBox";
             this.CodigoPostalTextBox.Size = new System.Drawing.Size(191, 20);
             this.CodigoPostalTextBox.TabIndex = 24;
@@ -65,6 +66,7 @@
             // CiudadIdTextBox
             // 
             this.CiudadIdTextBox.Location = new System.Drawing.Point(87, 37);
+            this.CiudadIdTextBox.MaxLength = 6;
             this.CiudadIdTextBox.Name = "CiudadIdTextBox";
             this.CiudadIdTextBox.Size = new System.Drawing.Size(111, 20);
             this.CiudadIdTextBox.TabIndex = 22;
@@ -128,6 +130,26 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Ciudades";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(284, 112);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(11, 13);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "*";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(285, 79);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(11, 13);
+            this.label4.TabIndex = 32;
+            this.label4.Text = "*";
+            // 
             // GuardarButton
             // 
             this.GuardarButton.Image = global::BillEasy0._1._0.Properties.Resources._1445977752_Save;
@@ -179,26 +201,6 @@
             this.label10.TabIndex = 33;
             this.label10.Text = "Registro de ciudades";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(285, 79);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(11, 13);
-            this.label4.TabIndex = 32;
-            this.label4.Text = "*";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(284, 112);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(11, 13);
-            this.label5.TabIndex = 33;
-            this.label5.Text = "*";
-            // 
             // RegistroCiudad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -212,6 +214,7 @@
             this.Name = "RegistroCiudad";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro de ciudades";
+            this.Load += new System.EventHandler(this.RegistroCiudad_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

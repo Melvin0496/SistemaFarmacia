@@ -73,6 +73,8 @@ namespace BillEasy0._1._0
             {
                 NombreTextBox.Text = marca.Nombre;
                 MarcaIdTextBox.ReadOnly = true;
+                GuardarButton.Text = "Modificar";
+                EliminarButton.Enabled = true;
             }
             else
             {
@@ -86,6 +88,9 @@ namespace BillEasy0._1._0
             MarcaIdTextBox.Clear();
             NombreTextBox.Clear();
             MarcaIdTextBox.ReadOnly = false;
+            EliminarButton.Enabled = false;
+            GuardarButton.Text = "Guardar";
+            miError.Clear();
         }
 
         private void GuardarButton_Click(object sender, EventArgs e)
@@ -113,6 +118,8 @@ namespace BillEasy0._1._0
                 {
                     MessageBox.Show("Marca Editada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     NuevoButton.PerformClick();
+                    GuardarButton.Text = "Modificar";
+                    EliminarButton.Enabled = false;
                 }
                 else
                 {
@@ -137,6 +144,8 @@ namespace BillEasy0._1._0
                 {
                     MessageBox.Show("Marca Eliminada correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     NuevoButton.PerformClick();
+                    GuardarButton.Text = "Guardar";
+                    EliminarButton.Enabled = false;
                 }
                 else
                 {
@@ -171,6 +180,11 @@ namespace BillEasy0._1._0
             {
                 miError.SetError(NombreTextBox, "");
             }
+        }
+
+        private void RegistroMarca_Load(object sender, EventArgs e)
+        {
+            EliminarButton.Enabled = false;
         }
     }
 }

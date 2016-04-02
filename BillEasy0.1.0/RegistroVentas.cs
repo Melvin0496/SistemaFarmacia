@@ -98,10 +98,15 @@ namespace BillEasy0._1._0
             TotalTextBox.Clear();
             VentasdataGridView.Rows.Clear();
             BuscarVentaButton.Enabled = true;
+            GuardarButton.Text = "Guardar";
+            EliminarButton.Enabled = false;
+            miError.Clear();
         }
 
         private void RegistroVentas_Load(object sender, EventArgs e)
         {
+            EliminarButton.Enabled = false;
+
             Clientes cliente = new Clientes();
             Usuarios usuario = new Usuarios();
             ClientecomboBox.DataSource = cliente.Listado("*", "1=1", "");
@@ -150,6 +155,8 @@ namespace BillEasy0._1._0
             {
                 MessageBox.Show("Venta Eliminada","Mensaje",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 NuevoButton.PerformClick();
+                GuardarButton.Text = "Guardar";
+                EliminarButton.Enabled = false;
             }
             else
             {
@@ -182,6 +189,8 @@ namespace BillEasy0._1._0
                 {
                     MessageBox.Show("Venta Editada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     NuevoButton.PerformClick();
+                    GuardarButton.Text = "Modificar";
+                    EliminarButton.Enabled = false;
                 }
                 else
                 {
@@ -201,6 +210,8 @@ namespace BillEasy0._1._0
                 PrecioTextBox.Text = producto.Precio.ToString();
                 NombreTextBox.Text = producto.Nombre;
                 ITBISTextBox.Text = producto.ITBIS.ToString();
+                GuardarButton.Text = "Modificar";
+                EliminarButton.Enabled = true;
             }
             else
             {
@@ -225,7 +236,8 @@ namespace BillEasy0._1._0
                     VentasdataGridView.Rows.Add(venta.ProductoId.ToString(), venta.Nombre, venta.Cantidad.ToString(), venta.Precio.ToString(), venta.ITBIS.ToString(),venta.Descuentos.ToString(),venta.Importe.ToString());
                 }
                 BuscarVentaButton.Enabled = false;
-             
+                GuardarButton.Text = "Modificar";
+                EliminarButton.Enabled = true;
             }
             else
             {

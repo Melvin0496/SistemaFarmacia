@@ -95,6 +95,8 @@ namespace BillEasy0._1._0
                 NombreTextBox.Text = ciudad.Nombre;
                 CodigoPostalTextBox.Text = ciudad.CodigoPostal.ToString();
                 CiudadIdTextBox.ReadOnly = true;
+                GuardarButton.Text = "Modificar";
+                EliminarButton.Enabled = true;
             }
             else
             {
@@ -108,6 +110,9 @@ namespace BillEasy0._1._0
             NombreTextBox.Clear();
             CodigoPostalTextBox.Clear();
             CiudadIdTextBox.ReadOnly = false;
+            EliminarButton.Enabled = false;
+            GuardarButton.Text = "Guadar";
+            miError.Clear();
         }
 
         private void GuardarButton_Click(object sender, EventArgs e)
@@ -134,6 +139,8 @@ namespace BillEasy0._1._0
                 {
                     MessageBox.Show("Ciudad Editada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     NuevoButton.PerformClick();
+                    GuardarButton.Text = "Guardar";
+                    EliminarButton.Enabled = false;
                 }
                 else
                 {
@@ -159,6 +166,8 @@ namespace BillEasy0._1._0
                 {
                     MessageBox.Show("Ciudad Eliminada correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     NuevoButton.PerformClick();
+                    GuardarButton.Text = "Guardar";
+                    EliminarButton.Enabled = false;
                 }
                 else
                 {
@@ -207,6 +216,11 @@ namespace BillEasy0._1._0
             {
                 miError.SetError(CodigoPostalTextBox, "");
             }
+        }
+
+        private void RegistroCiudad_Load(object sender, EventArgs e)
+        {
+            EliminarButton.Enabled = false;
         }
     }
 }

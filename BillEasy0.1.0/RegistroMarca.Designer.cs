@@ -37,8 +37,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -108,6 +108,7 @@
             // MarcaIdTextBox
             // 
             this.MarcaIdTextBox.Location = new System.Drawing.Point(113, 28);
+            this.MarcaIdTextBox.MaxLength = 6;
             this.MarcaIdTextBox.Name = "MarcaIdTextBox";
             this.MarcaIdTextBox.Size = new System.Drawing.Size(111, 20);
             this.MarcaIdTextBox.TabIndex = 0;
@@ -149,16 +150,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Marcas";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Monotype Corsiva", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(83, 21);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(223, 36);
-            this.label10.TabIndex = 33;
-            this.label10.Text = "Registro de marcas";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -168,6 +159,16 @@
             this.label4.Size = new System.Drawing.Size(11, 13);
             this.label4.TabIndex = 33;
             this.label4.Text = "*";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Monotype Corsiva", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(83, 21);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(223, 36);
+            this.label10.TabIndex = 33;
+            this.label10.Text = "Registro de marcas";
             // 
             // RegistroMarca
             // 
@@ -179,6 +180,7 @@
             this.Name = "RegistroMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro de marcas";
+            this.Load += new System.EventHandler(this.RegistroMarca_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

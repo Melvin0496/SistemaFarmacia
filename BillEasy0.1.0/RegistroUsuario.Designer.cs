@@ -111,6 +111,7 @@
             // UsuarioIdTextBox
             // 
             this.UsuarioIdTextBox.Location = new System.Drawing.Point(113, 25);
+            this.UsuarioIdTextBox.MaxLength = 6;
             this.UsuarioIdTextBox.Name = "UsuarioIdTextBox";
             this.UsuarioIdTextBox.Size = new System.Drawing.Size(111, 20);
             this.UsuarioIdTextBox.TabIndex = 0;
@@ -307,6 +308,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro de usuarios";
             this.TransparencyKey = System.Drawing.Color.MintCream;
+            this.Load += new System.EventHandler(this.RegistroUsuario_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

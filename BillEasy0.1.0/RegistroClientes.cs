@@ -159,6 +159,9 @@ namespace BillEasy0._1._0
             CiudadComboBox.DataSource = ciudades.Listado("CiudadId,Nombre,CodigoPostal ", "1=1", "");
             CiudadComboBox.DisplayMember = string.Format("Nombre");
             CiudadComboBox.ValueMember = "CiudadId";
+
+
+            EliminarButton.Enabled = false;
         }
 
         private void BuscarButton_Click(object sender, EventArgs e)
@@ -177,7 +180,8 @@ namespace BillEasy0._1._0
                 CedulamaskedTextBox.Text = clientes.Cedula;
                 CiudadComboBox.SelectedValue = clientes.CiudadId;
                 ClienteIdtextBox.ReadOnly = true;
-
+                GuardarButton.Text = "Modificar";
+                EliminarButton.Enabled = true;
             }
             else
             {
@@ -198,6 +202,9 @@ namespace BillEasy0._1._0
             EmailTextBox.Clear();
             CedulamaskedTextBox.Clear();
             ClienteIdtextBox.ReadOnly = false;
+            EliminarButton.Enabled = false;
+            GuardarButton.Text = "Guardar";
+            miError.Clear();
         }
 
         private void GuardarButton_Click(object sender, EventArgs e)
@@ -212,6 +219,7 @@ namespace BillEasy0._1._0
                 {
                     MessageBox.Show("Cliente insertado","Mensaje",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     NuevoButton.PerformClick();
+                   
                 }
                 else
                 {
@@ -226,6 +234,8 @@ namespace BillEasy0._1._0
                 {
                     MessageBox.Show("Se edito Correctamente","Mensaje",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     NuevoButton.PerformClick();
+                    GuardarButton.Text = "Modificar";
+                    EliminarButton.Enabled = false;
                 }
                 else
                 {
@@ -242,6 +252,8 @@ namespace BillEasy0._1._0
             {
                 MessageBox.Show("Cliente eliminado","Mensaje",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 NuevoButton.PerformClick();
+                GuardarButton.Text = "Guardar";
+                EliminarButton.Enabled = false;
             }
             else
             {
