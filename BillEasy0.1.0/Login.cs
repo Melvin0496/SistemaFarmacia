@@ -24,6 +24,7 @@ namespace BillEasy0._1._0
         {
             UsuarioTextBox.Clear();
             ContrasenaTextBox.Clear();
+            miError.Clear();
         }
 
         private void AccederButton_Click(object sender, EventArgs e)

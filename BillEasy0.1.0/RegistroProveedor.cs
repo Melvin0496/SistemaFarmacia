@@ -166,7 +166,7 @@ namespace BillEasy0._1._0
 
         private void RegistroProveedor_Load_1(object sender, EventArgs e)
         {
-
+            EliminarButton.Enabled = false;
             Ciudades ciudad = new Ciudades();
             CiudadComboBox.DataSource = ciudad.Listado("CiudadId,Nombre,CodigoPostal ", "1=1", "");
             CiudadComboBox.DisplayMember = "Nombre";
@@ -190,6 +190,8 @@ namespace BillEasy0._1._0
                 NombreRepresentanteTextBox.Text = proveedor.NombreRepresentante;
                 CelularMaskedTextBox.Text = proveedor.Celular;
                 ProveedorIdTextBox.ReadOnly = true;
+                ButtonGuardar.Text = "Modificar";
+                EliminarButton.Enabled = true;
             }
             else
             {
@@ -208,6 +210,9 @@ namespace BillEasy0._1._0
             NombreRepresentanteTextBox.Clear();
             CelularMaskedTextBox.Clear();
             ProveedorIdTextBox.ReadOnly = false;
+            miError.Clear();
+            ButtonGuardar.Text = "Guardar";
+            EliminarButton.Enabled = false;
         }
 
         private void GuardarButton_Click(object sender, EventArgs e)
@@ -235,6 +240,8 @@ namespace BillEasy0._1._0
                 {
                     MessageBox.Show("Proveedor editado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     NuevoButton.PerformClick();
+                    ButtonGuardar.Text = "Modificar";
+                    EliminarButton.Enabled = false;
                 }
                 else
                 {
@@ -259,6 +266,8 @@ namespace BillEasy0._1._0
                 {
                     MessageBox.Show("Proveedor Eliminado correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     NuevoButton.PerformClick();
+                    ButtonGuardar.Text = "Guardar";
+                    EliminarButton.Enabled = false;
                 }
                 else
                 {

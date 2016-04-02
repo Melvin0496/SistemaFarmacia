@@ -80,6 +80,7 @@
             // NombreRepresentanteTextBox
             // 
             this.NombreRepresentanteTextBox.Location = new System.Drawing.Point(414, 103);
+            this.NombreRepresentanteTextBox.MaxLength = 20;
             this.NombreRepresentanteTextBox.Name = "NombreRepresentanteTextBox";
             this.NombreRepresentanteTextBox.Size = new System.Drawing.Size(181, 20);
             this.NombreRepresentanteTextBox.TabIndex = 7;
@@ -194,6 +195,7 @@
             // ProveedorIdTextBox
             // 
             this.ProveedorIdTextBox.Location = new System.Drawing.Point(112, 31);
+            this.ProveedorIdTextBox.MaxLength = 6;
             this.ProveedorIdTextBox.Name = "ProveedorIdTextBox";
             this.ProveedorIdTextBox.Size = new System.Drawing.Size(100, 20);
             this.ProveedorIdTextBox.TabIndex = 0;

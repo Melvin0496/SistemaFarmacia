@@ -48,6 +48,7 @@
             // CodigoPostalTextBox
             // 
             this.CodigoPostalTextBox.Location = new System.Drawing.Point(87, 109);
+            this.CodigoPostalTextBox.MaxLength = 6;
             this.CodigoPostalTextBox.Name = "CodigoPostalTextBox";
             this.CodigoPostalTextBox.Size = new System.Drawing.Size(191, 20);
             this.CodigoPostalTextBox.TabIndex = 24;
@@ -65,6 +66,7 @@
             // CiudadIdTextBox
             // 
             this.CiudadIdTextBox.Location = new System.Drawing.Point(87, 37);
+            this.CiudadIdTextBox.MaxLength = 6;
             this.CiudadIdTextBox.Name = "CiudadIdTextBox";
             this.CiudadIdTextBox.Size = new System.Drawing.Size(111, 20);
             this.CiudadIdTextBox.TabIndex = 22;

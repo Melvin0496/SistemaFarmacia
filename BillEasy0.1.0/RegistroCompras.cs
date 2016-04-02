@@ -139,6 +139,8 @@ namespace BillEasy0._1._0
 
             VisibleButtonEliminar();
             
+
+            EliminarButton.Enabled = false;
         }
         double monto;
         public int Convertir()
@@ -184,6 +186,8 @@ namespace BillEasy0._1._0
                 NombreTextBox.Text = producto.Nombre;
                 CostoTextBox.Text = producto.Costo.ToString();
                 ITBISTextBox.Text = producto.ITBIS.ToString();
+                GuardarButton.Text = "Modificar";
+                EliminarButton.Enabled = true;
             }
             else
             {
@@ -234,6 +238,9 @@ namespace BillEasy0._1._0
             FleteTextBox.Clear();
             MontoTextBox.Clear();
             CompraDataGridView.Rows.Clear();
+            error.Clear();
+            EliminarButton.Enabled = false;
+            GuardarButton.Text = "Guardar";
         }
 
         private void GuardarButton_Click(object sender, EventArgs e)
@@ -266,6 +273,8 @@ namespace BillEasy0._1._0
                 {
                     MessageBox.Show("Compra Editada correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     NuevoButton.PerformClick();
+                    GuardarButton.Text = "Modificar";
+                    EliminarButton.Enabled = false;
                 }
                 else
                 {
@@ -282,16 +291,18 @@ namespace BillEasy0._1._0
             {
                 if (compra.Buscar(compra.CompraId))
                 {
-                    if (compra.Eliminar())
-                    {
-                        MessageBox.Show("Compra Eliminada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        NuevoButton.PerformClick();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Error al eliminar", "alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
+            if (compra.Eliminar())
+            {
+                MessageBox.Show("Compra Eliminada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                NuevoButton.PerformClick();
+                GuardarButton.Text = "Guardar";
+                EliminarButton.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("Error al eliminar", "alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
                 else
                     {
                         MessageBox.Show("Esta Compra no Existe", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -347,7 +358,7 @@ namespace BillEasy0._1._0
         {
             VisibleButtonEliminar();
         }
-
+      
         private void ProductoIdTextBox_TextChanged(object sender, EventArgs e)
         {
             if (ProductoIdTextBox.Text != "")

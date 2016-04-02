@@ -111,6 +111,7 @@
             // UsuarioIdTextBox
             // 
             this.UsuarioIdTextBox.Location = new System.Drawing.Point(113, 25);
+            this.UsuarioIdTextBox.MaxLength = 6;
             this.UsuarioIdTextBox.Name = "UsuarioIdTextBox";
             this.UsuarioIdTextBox.Size = new System.Drawing.Size(111, 20);
             this.UsuarioIdTextBox.TabIndex = 0;

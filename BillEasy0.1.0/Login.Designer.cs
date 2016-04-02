@@ -58,6 +58,7 @@
             // UsuarioTextBox
             // 
             this.UsuarioTextBox.Location = new System.Drawing.Point(129, 48);
+            this.UsuarioTextBox.MaxLength = 20;
             this.UsuarioTextBox.Name = "UsuarioTextBox";
             this.UsuarioTextBox.Size = new System.Drawing.Size(149, 20);
             this.UsuarioTextBox.TabIndex = 2;
@@ -65,6 +66,7 @@
             // ContrasenaTextBox
             // 
             this.ContrasenaTextBox.Location = new System.Drawing.Point(129, 84);
+            this.ContrasenaTextBox.MaxLength = 40;
             this.ContrasenaTextBox.Name = "ContrasenaTextBox";
             this.ContrasenaTextBox.Size = new System.Drawing.Size(149, 20);
             this.ContrasenaTextBox.TabIndex = 3;

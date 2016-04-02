@@ -108,6 +108,7 @@
             // MarcaIdTextBox
             // 
             this.MarcaIdTextBox.Location = new System.Drawing.Point(113, 28);
+            this.MarcaIdTextBox.MaxLength = 6;
             this.MarcaIdTextBox.Name = "MarcaIdTextBox";
             this.MarcaIdTextBox.Size = new System.Drawing.Size(111, 20);
             this.MarcaIdTextBox.TabIndex = 0;

@@ -95,6 +95,8 @@ namespace BillEasy0._1._0
                 NombreTextBox.Text = ciudad.Nombre;
                 CodigoPostalTextBox.Text = ciudad.CodigoPostal.ToString();
                 CiudadIdTextBox.ReadOnly = true;
+                GuardarButton.Text = "Modificar";
+                EliminarButton.Enabled = true;
             }
             else
             {
@@ -108,6 +110,9 @@ namespace BillEasy0._1._0
             NombreTextBox.Clear();
             CodigoPostalTextBox.Clear();
             CiudadIdTextBox.ReadOnly = false;
+            EliminarButton.Enabled = false;
+            GuardarButton.Text = "Guadar";
+            miError.Clear();
         }
 
         private void GuardarButton_Click(object sender, EventArgs e)
@@ -134,6 +139,8 @@ namespace BillEasy0._1._0
                 {
                     MessageBox.Show("Ciudad Editada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     NuevoButton.PerformClick();
+                    GuardarButton.Text = "Guardar";
+                    EliminarButton.Enabled = false;
                 }
                 else
                 {
@@ -151,26 +158,28 @@ namespace BillEasy0._1._0
                 if (ciudad.Buscar(ciudad.CiudadId))
                 {
 
-                    if (CiudadIdTextBox.TextLength == 0)
-                    {
-                        MessageBox.Show("Debe especificar el ID", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                    else
-                    if (CiudadIdTextBox.Text.Length > 0)
-                    {
-
-                        ciudad.CiudadId = Convertir();
-                        if (ciudad.Eliminar())
-                        {
-                            MessageBox.Show("Ciudad Eliminada correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            NuevoButton.PerformClick();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Error al eliminar la ciudad", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
+            if (CiudadIdTextBox.TextLength == 0)
+            {
+                MessageBox.Show("Debe especificar el ID", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            if (CiudadIdTextBox.Text.Length > 0)
+            {
+                
+                ciudad.CiudadId = Convertir();
+                if (ciudad.Eliminar())
+                {
+                    MessageBox.Show("Ciudad Eliminada correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    NuevoButton.PerformClick();
+                    GuardarButton.Text = "Guardar";
+                    EliminarButton.Enabled = false;
                 }
+                else
+                {
+                    MessageBox.Show("Error al eliminar la ciudad", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
                 else
                 {
                     MessageBox.Show("Esta Ciudad no existe", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);

@@ -98,6 +98,9 @@ namespace BillEasy0._1._0
             TotalTextBox.Clear();
             VentasdataGridView.Rows.Clear();
             BuscarVentaButton.Enabled = true;
+            GuardarButton.Text = "Guardar";
+            EliminarButton.Enabled = false;
+            miError.Clear();
         }
 
         private void VisibleButtonEliminar()
@@ -110,6 +113,8 @@ namespace BillEasy0._1._0
 
         private void RegistroVentas_Load(object sender, EventArgs e)
         {
+            EliminarButton.Enabled = false;
+
             Clientes cliente = new Clientes();
             Usuarios usuario = new Usuarios();
             ClientecomboBox.DataSource = cliente.Listado("*", "1=1", "");
@@ -159,6 +164,8 @@ namespace BillEasy0._1._0
             {
                 MessageBox.Show("Venta Eliminada","Mensaje",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 NuevoButton.PerformClick();
+                GuardarButton.Text = "Guardar";
+                EliminarButton.Enabled = false;
             }
             else
             {
@@ -174,33 +181,35 @@ namespace BillEasy0._1._0
                 MessageBox.Show("Tiene que Agregar uno o mas Productos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
-                if (VentaIdTextBox.Text.Length == 0)
+            if (VentaIdTextBox.Text.Length == 0)
+            {
+                LlenarDatos(venta);
+                if (Error() == 0 && Validar() == 1 && venta.Insertar())
                 {
-                    LlenarDatos(venta);
-                    if (Error() == 0 && Validar() == 1 && venta.Insertar())
-                    {
-                        MessageBox.Show("Venta Guardada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        NuevoButton.PerformClick();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Error al guardar", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    MessageBox.Show("Venta Guardada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    NuevoButton.PerformClick();
                 }
-                else if(VentaIdTextBox.Text.Length > 0)
+                else
                 {
-                    venta.VentaId = Convertir();
-                    LlenarDatos(venta);
-                    if (Error() == 0 && Validar() == 1 && venta.Editar())
-                    {
-                        MessageBox.Show("Venta Editada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        NuevoButton.PerformClick();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Error al editar", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    MessageBox.Show("Error al guardar", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+            else if(VentaIdTextBox.Text.Length > 0)
+            {
+                venta.VentaId = Convertir();
+                LlenarDatos(venta);
+                if (Error() == 0 && Validar() == 1 && venta.Editar())
+                {
+                    MessageBox.Show("Venta Editada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    NuevoButton.PerformClick();
+                    GuardarButton.Text = "Modificar";
+                    EliminarButton.Enabled = false;
+                }
+                else
+                {
+                    MessageBox.Show("Error al editar", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
         private void BuscarProductoButton_Click(object sender, EventArgs e)
         {
@@ -214,6 +223,8 @@ namespace BillEasy0._1._0
                 PrecioTextBox.Text = producto.Precio.ToString();
                 NombreTextBox.Text = producto.Nombre;
                 ITBISTextBox.Text = producto.ITBIS.ToString();
+                GuardarButton.Text = "Modificar";
+                EliminarButton.Enabled = true;
             }
             else
             {
@@ -238,7 +249,8 @@ namespace BillEasy0._1._0
                     VentasdataGridView.Rows.Add(venta.ProductoId.ToString(), venta.Nombre, venta.Cantidad.ToString(), venta.Precio.ToString(), venta.ITBIS.ToString(),venta.Descuentos.ToString(),venta.Importe.ToString());
                 }
                 BuscarVentaButton.Enabled = false;
-             
+                GuardarButton.Text = "Modificar";
+                EliminarButton.Enabled = true;
             }
             else
             {

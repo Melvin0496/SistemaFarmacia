@@ -91,6 +91,8 @@ namespace BillEasy0._1._0
                 ContrasenaTextBox.Text = usuario.Contrasena;
                 AreaTextBox.Text = usuario.Area;
                 FechadateTimePicker.Text = usuario.Fecha;
+                GuardarButton.Text = "Modificar";
+                EliminarButton.Enabled = true;
             }
             else
             {
@@ -104,6 +106,9 @@ namespace BillEasy0._1._0
             NombreUsuarioTextBox.Clear();
             ContrasenaTextBox.Clear();
             AreaTextBox.Clear();
+            miError.Clear();
+            GuardarButton.Text = "Guardar";
+            EliminarButton.Enabled = false;
 
         }
 
@@ -120,6 +125,8 @@ namespace BillEasy0._1._0
                 {
                     MessageBox.Show("Usuario editado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     NuevoButton.PerformClick();
+                    GuardarButton.Text = "Modificar";
+                    EliminarButton.Enabled = false;
                 }
                 else
                 {
@@ -161,6 +168,8 @@ namespace BillEasy0._1._0
                     {
                         MessageBox.Show("Usuario Eliminado correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         NuevoButton.PerformClick();
+                        GuardarButton.Text = "Guardar";
+                        EliminarButton.Enabled = false;
                     }
                     else
                     {
@@ -195,6 +204,11 @@ namespace BillEasy0._1._0
             {
                 miError.SetError(NombreTextBox, "");
             }
+        }
+
+        private void RegistroUsuario_Load(object sender, EventArgs e)
+        {
+            EliminarButton.Enabled = false;
         }
         private void UsuarioIdTextBox_TextChanged(object sender, EventArgs e)
         {

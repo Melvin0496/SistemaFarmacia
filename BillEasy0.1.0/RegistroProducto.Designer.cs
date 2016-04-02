@@ -71,6 +71,7 @@
             // ITBISTextBox
             // 
             this.ITBISTextBox.Location = new System.Drawing.Point(409, 110);
+            this.ITBISTextBox.MaxLength = 6;
             this.ITBISTextBox.Name = "ITBISTextBox";
             this.ITBISTextBox.Size = new System.Drawing.Size(181, 20);
             this.ITBISTextBox.TabIndex = 7;
@@ -88,6 +89,7 @@
             // PrecioTextBox
             // 
             this.PrecioTextBox.Location = new System.Drawing.Point(409, 42);
+            this.PrecioTextBox.MaxLength = 12;
             this.PrecioTextBox.Name = "PrecioTextBox";
             this.PrecioTextBox.Size = new System.Drawing.Size(181, 20);
             this.PrecioTextBox.TabIndex = 5;
@@ -96,6 +98,7 @@
             // CostoTextBox
             // 
             this.CostoTextBox.Location = new System.Drawing.Point(409, 77);
+            this.CostoTextBox.MaxLength = 12;
             this.CostoTextBox.Name = "CostoTextBox";
             this.CostoTextBox.Size = new System.Drawing.Size(181, 20);
             this.CostoTextBox.TabIndex = 6;
@@ -176,6 +179,7 @@
             // ProductoIdTextBox
             // 
             this.ProductoIdTextBox.Location = new System.Drawing.Point(123, 42);
+            this.ProductoIdTextBox.MaxLength = 6;
             this.ProductoIdTextBox.Name = "ProductoIdTextBox";
             this.ProductoIdTextBox.Size = new System.Drawing.Size(100, 20);
             this.ProductoIdTextBox.TabIndex = 0;
@@ -316,6 +320,7 @@
             // DescripcionRichTextBox
             // 
             this.DescripcionRichTextBox.Location = new System.Drawing.Point(409, 136);
+            this.DescripcionRichTextBox.MaxLength = 400;
             this.DescripcionRichTextBox.Name = "DescripcionRichTextBox";
             this.DescripcionRichTextBox.Size = new System.Drawing.Size(181, 96);
             this.DescripcionRichTextBox.TabIndex = 84;
@@ -333,6 +338,7 @@
             // CantidadTextBox
             // 
             this.CantidadTextBox.Location = new System.Drawing.Point(123, 144);
+            this.CantidadTextBox.MaxLength = 12;
             this.CantidadTextBox.Name = "CantidadTextBox";
             this.CantidadTextBox.Size = new System.Drawing.Size(181, 20);
             this.CantidadTextBox.TabIndex = 82;

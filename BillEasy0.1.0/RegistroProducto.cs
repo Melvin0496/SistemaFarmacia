@@ -134,6 +134,8 @@ namespace BillEasy0._1._0
             MarcaComboBox.ValueMember = "MarcaId";
 
             VisibleButtonEliminar();
+            EliminarButton.Enabled = false;
+
         }
 
         private void BuscarButton_Click(object sender, EventArgs e)
@@ -150,6 +152,8 @@ namespace BillEasy0._1._0
                 ITBISTextBox.Text = producto.ITBIS.ToString();
                 ProductoIdTextBox.ReadOnly = true;
                 DescripcionRichTextBox.Text = producto.Descripcion;
+                GuardarButton.Text = "Modificar";
+                EliminarButton.Enabled = true;
             }
             else
             {
@@ -167,6 +171,9 @@ namespace BillEasy0._1._0
             CantidadTextBox.Clear();
             ProductoIdTextBox.ReadOnly = false;
             DescripcionRichTextBox.Clear();
+            GuardarButton.Text = "Guardar";
+            EliminarButton.Enabled = false;
+            miError.Clear();
         }
 
         private void GuardarButton_Click(object sender, EventArgs e)
@@ -193,6 +200,8 @@ namespace BillEasy0._1._0
                 {
                     MessageBox.Show("Producto editado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     NuevoButton.PerformClick();
+                    GuardarButton.Text = "Modificar";
+                    EliminarButton.Enabled = false;
                 }
                 else
                 {
@@ -211,6 +220,8 @@ namespace BillEasy0._1._0
                 {
                     MessageBox.Show("Producto Eliminado correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     NuevoButton.PerformClick();
+                    GuardarButton.Text = "Guardar";
+                    EliminarButton.Enabled = false;
                 }
                 else
                 {
