@@ -207,8 +207,10 @@ namespace BillEasy0._1._0
 
         private void VisibleButtonEliminar()
         {
-            if ((UsuarioIdTextBox.Text != "")) EliminarButton.Enabled = true;
-            else EliminarButton.Enabled = false;
+            if ((UsuarioIdTextBox.Text != ""))
+                EliminarButton.Enabled = true;
+            else
+                EliminarButton.Enabled = false;
         }
     }
 }

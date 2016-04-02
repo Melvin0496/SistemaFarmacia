@@ -127,6 +127,7 @@
             // ClienteIdtextBox
             // 
             this.ClienteIdtextBox.Location = new System.Drawing.Point(63, 31);
+            this.ClienteIdtextBox.MaxLength = 5;
             this.ClienteIdtextBox.Name = "ClienteIdtextBox";
             this.ClienteIdtextBox.Size = new System.Drawing.Size(100, 20);
             this.ClienteIdtextBox.TabIndex = 0;

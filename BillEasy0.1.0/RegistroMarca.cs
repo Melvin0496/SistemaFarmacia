@@ -125,22 +125,32 @@ namespace BillEasy0._1._0
         private void EliminarButton_Click(object sender, EventArgs e)
         {
             Marcas marca = new Marcas();
-            if (MarcaIdTextBox.TextLength == 0)
+            if (marca.MarcaId > 0)
             {
-                MessageBox.Show("Debe especificar el ID", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            if (MarcaIdTextBox.Text.Length > 0)
-            {
-                marca.MarcaId = Convertir();
-                if (marca.Eliminar())
+                if (marca.Buscar(marca.MarcaId))
                 {
-                    MessageBox.Show("Marca Eliminada correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    NuevoButton.PerformClick();
+                    if (MarcaIdTextBox.TextLength == 0)
+                    {
+                        MessageBox.Show("Debe especificar el ID", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    if (MarcaIdTextBox.Text.Length > 0)
+                    {
+                        marca.MarcaId = Convertir();
+                        if (marca.Eliminar())
+                        {
+                            MessageBox.Show("Marca Eliminada correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            NuevoButton.PerformClick();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error al eliminar la marca", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Error al eliminar la marca", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Esta Marca no Existe", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -175,8 +185,11 @@ namespace BillEasy0._1._0
 
         private void VisibleButtonEliminar()
         {
-            if ((MarcaIdTextBox.Text != "")) EliminarButton.Enabled = true;
-            else EliminarButton.Enabled = false;
+            if ((MarcaIdTextBox.Text != ""))
+
+                EliminarButton.Enabled = true;
+            else
+                EliminarButton.Enabled = false;
         }
 
         private void RegistroMarca_Load(object sender, EventArgs e)

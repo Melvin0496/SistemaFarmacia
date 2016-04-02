@@ -146,23 +146,34 @@ namespace BillEasy0._1._0
         private void EliminarButton_Click(object sender, EventArgs e)
         {
             Ciudades ciudad = new Ciudades();
-            if (CiudadIdTextBox.TextLength == 0)
+            if (ciudad.CiudadId > 0)
             {
-                MessageBox.Show("Debe especificar el ID", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            if (CiudadIdTextBox.Text.Length > 0)
-            {
-                
-                ciudad.CiudadId = Convertir();
-                if (ciudad.Eliminar())
+                if (ciudad.Buscar(ciudad.CiudadId))
                 {
-                    MessageBox.Show("Ciudad Eliminada correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    NuevoButton.PerformClick();
+
+                    if (CiudadIdTextBox.TextLength == 0)
+                    {
+                        MessageBox.Show("Debe especificar el ID", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    if (CiudadIdTextBox.Text.Length > 0)
+                    {
+
+                        ciudad.CiudadId = Convertir();
+                        if (ciudad.Eliminar())
+                        {
+                            MessageBox.Show("Ciudad Eliminada correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            NuevoButton.PerformClick();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error al eliminar la ciudad", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Error al eliminar la ciudad", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Esta Ciudad no existe", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -211,8 +222,11 @@ namespace BillEasy0._1._0
 
         private void VisibleButtonEliminar()
         {
-            if ((CiudadIdTextBox.Text != "")) EliminarButton.Enabled = true;
-            else EliminarButton.Enabled = false;
+            if ((CiudadIdTextBox.Text != ""))
+            
+                EliminarButton.Enabled = true;
+            else
+                EliminarButton.Enabled = false;
         }
 
         private void RegistroCiudad_Load(object sender, EventArgs e)

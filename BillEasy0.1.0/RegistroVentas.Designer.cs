@@ -53,6 +53,13 @@
             this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
             this.VentasdataGridView = new System.Windows.Forms.DataGridView();
+            this.ProductoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ITBIS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClientecomboBox = new System.Windows.Forms.ComboBox();
             this.TipoNFCTextBox = new System.Windows.Forms.TextBox();
             this.NFCTextBox = new System.Windows.Forms.TextBox();
@@ -68,13 +75,6 @@
             this.NuevoButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
-            this.ProductoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ITBIS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DatosVentasgroupBox.SuspendLayout();
             this.ProductogroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VentasdataGridView)).BeginInit();
@@ -252,6 +252,7 @@
             this.ProductoIdTextBox.Name = "ProductoIdTextBox";
             this.ProductoIdTextBox.Size = new System.Drawing.Size(91, 20);
             this.ProductoIdTextBox.TabIndex = 6;
+            this.ProductoIdTextBox.TextChanged += new System.EventHandler(this.ProductoIdTextBox_TextChanged);
             this.ProductoIdTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ProductoIdtextBox_KeyPress);
             // 
             // PrecioTextBox
@@ -309,6 +310,7 @@
             // CantidadTextBox
             // 
             this.CantidadTextBox.Location = new System.Drawing.Point(311, 26);
+            this.CantidadTextBox.MaxLength = 5;
             this.CantidadTextBox.Name = "CantidadTextBox";
             this.CantidadTextBox.Size = new System.Drawing.Size(143, 20);
             this.CantidadTextBox.TabIndex = 8;
@@ -349,6 +351,43 @@
             this.VentasdataGridView.Name = "VentasdataGridView";
             this.VentasdataGridView.Size = new System.Drawing.Size(708, 134);
             this.VentasdataGridView.TabIndex = 18;
+            // 
+            // ProductoId
+            // 
+            this.ProductoId.HeaderText = "ProductoId";
+            this.ProductoId.Name = "ProductoId";
+            this.ProductoId.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            // 
+            // Precio
+            // 
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            // 
+            // ITBIS
+            // 
+            this.ITBIS.HeaderText = "ITBIS";
+            this.ITBIS.Name = "ITBIS";
+            // 
+            // Descuento
+            // 
+            this.Descuento.HeaderText = "Descuento";
+            this.Descuento.Name = "Descuento";
+            // 
+            // Importe
+            // 
+            this.Importe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Importe.HeaderText = "Importe";
+            this.Importe.Name = "Importe";
             // 
             // ClientecomboBox
             // 
@@ -494,43 +533,6 @@
             this.EliminarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.EliminarButton.UseVisualStyleBackColor = true;
             this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
-            // 
-            // ProductoId
-            // 
-            this.ProductoId.HeaderText = "ProductoId";
-            this.ProductoId.Name = "ProductoId";
-            this.ProductoId.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            // 
-            // ITBIS
-            // 
-            this.ITBIS.HeaderText = "ITBIS";
-            this.ITBIS.Name = "ITBIS";
-            // 
-            // Descuento
-            // 
-            this.Descuento.HeaderText = "Descuento";
-            this.Descuento.Name = "Descuento";
-            // 
-            // Importe
-            // 
-            this.Importe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Importe.HeaderText = "Importe";
-            this.Importe.Name = "Importe";
             // 
             // RegistroVentas
             // 

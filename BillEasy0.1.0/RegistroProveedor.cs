@@ -158,8 +158,10 @@ namespace BillEasy0._1._0
         }
         private void VisibleButtonEliminar()
         {
-            if ((ProveedorIdTextBox.Text != "")) EliminarButton.Enabled = true;
-            else EliminarButton.Enabled = false;
+            if ((ProveedorIdTextBox.Text != ""))
+                EliminarButton.Enabled = true;
+            else
+                EliminarButton.Enabled = false;
         }
 
         private void RegistroProveedor_Load_1(object sender, EventArgs e)

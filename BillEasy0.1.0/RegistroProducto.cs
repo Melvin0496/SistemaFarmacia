@@ -119,8 +119,10 @@ namespace BillEasy0._1._0
 
         private void VisibleButtonEliminar()
         {
-            if ((ProductoIdTextBox.Text != "")) EliminarButton.Enabled = true;
-            else EliminarButton.Enabled = false;
+            if ((ProductoIdTextBox.Text != ""))
+                EliminarButton.Enabled = true;
+            else
+                EliminarButton.Enabled = false;
         }
 
         private void RegistroProducto_Load(object sender, EventArgs e)

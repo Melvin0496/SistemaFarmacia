@@ -155,8 +155,11 @@ namespace BillEasy0._1._0
 
         private void VisibleButtonEliminar()
         {
-            if ((ClienteIdtextBox.Text != "")) EliminarButton.Enabled = true;
-            else EliminarButton.Enabled = false;
+            if ((ClienteIdtextBox.Text != ""))
+
+                EliminarButton.Enabled = true;
+            else
+                EliminarButton.Enabled = false;
         }
 
         private void RegistroClientes_Load(object sender, EventArgs e)
@@ -246,14 +249,24 @@ namespace BillEasy0._1._0
         {
             Clientes clientes = new Clientes();
             clientes.ClienteId = ConversionId();
-            if (clientes.Eliminar() == true)
+            if (clientes.ClienteId > 0)
             {
-                MessageBox.Show("Cliente eliminado","Mensaje",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                NuevoButton.PerformClick();
-            }
-            else
-            {
-                MessageBox.Show("Ese cliente no existe","Alerta",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                if (clientes.Buscar(clientes.ClienteId)) {
+
+                    if (clientes.Eliminar() == true)
+                    {
+                        MessageBox.Show("Cliente eliminado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        NuevoButton.PerformClick();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ese cliente no existe", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Ese cliente no existe", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 

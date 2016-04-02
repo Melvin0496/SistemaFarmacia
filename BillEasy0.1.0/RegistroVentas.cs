@@ -102,8 +102,10 @@ namespace BillEasy0._1._0
 
         private void VisibleButtonEliminar()
         {
-            if ((VentaIdTextBox.Text != "")) EliminarButton.Enabled = true;
-            else EliminarButton.Enabled = false;
+            if ((VentaIdTextBox.Text != ""))
+                EliminarButton.Enabled = true;
+            else
+                EliminarButton.Enabled = false;
         }
 
         private void RegistroVentas_Load(object sender, EventArgs e)
@@ -167,34 +169,38 @@ namespace BillEasy0._1._0
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
             Ventas venta = new Ventas();
-
-            if (VentaIdTextBox.Text.Length == 0)
+            if(VentasdataGridView.Rows.Count == 0)
             {
-                LlenarDatos(venta);
-                if (Error() == 0 && Validar() == 1 && venta.Insertar())
-                {
-                    MessageBox.Show("Venta Guardada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    NuevoButton.PerformClick();
-                }
-                else
-                {
-                    MessageBox.Show("Error al guardar", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                MessageBox.Show("Tiene que Agregar uno o mas Productos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if(VentaIdTextBox.Text.Length > 0)
-            {
-                venta.VentaId = Convertir();
-                LlenarDatos(venta);
-                if (Error() == 0 && Validar() == 1 && venta.Editar())
+            else
+                if (VentaIdTextBox.Text.Length == 0)
                 {
-                    MessageBox.Show("Venta Editada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    NuevoButton.PerformClick();
+                    LlenarDatos(venta);
+                    if (Error() == 0 && Validar() == 1 && venta.Insertar())
+                    {
+                        MessageBox.Show("Venta Guardada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        NuevoButton.PerformClick();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al guardar", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-                else
+                else if(VentaIdTextBox.Text.Length > 0)
                 {
-                    MessageBox.Show("Error al editar", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    venta.VentaId = Convertir();
+                    LlenarDatos(venta);
+                    if (Error() == 0 && Validar() == 1 && venta.Editar())
+                    {
+                        MessageBox.Show("Venta Editada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        NuevoButton.PerformClick();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al editar", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-            }
         }
         private void BuscarProductoButton_Click(object sender, EventArgs e)
         {
@@ -326,6 +332,13 @@ namespace BillEasy0._1._0
         {
             VisibleButtonEliminar();
         }
-        
+
+        private void ProductoIdTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (ProductoIdTextBox.Text != "")
+                VentaIdTextBox.Enabled = false;
+            else
+                VentaIdTextBox.Enabled = true;
+        }
     }
 }

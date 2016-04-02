@@ -281,6 +281,7 @@
             this.ProductoIdTextBox.Name = "ProductoIdTextBox";
             this.ProductoIdTextBox.Size = new System.Drawing.Size(91, 20);
             this.ProductoIdTextBox.TabIndex = 0;
+            this.ProductoIdTextBox.TextChanged += new System.EventHandler(this.ProductoIdTextBox_TextChanged);
             this.ProductoIdTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ProductoIdTextBox_KeyPress);
             // 
             // label3
