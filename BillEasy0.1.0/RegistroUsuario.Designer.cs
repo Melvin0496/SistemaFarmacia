@@ -308,7 +308,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro de usuarios";
             this.TransparencyKey = System.Drawing.Color.MintCream;
-            this.Load += new System.EventHandler(this.RegistroUsuario_Load);
+            this.Load += new System.EventHandler(this.RegistroUsuario_Load_1);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

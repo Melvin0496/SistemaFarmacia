@@ -181,7 +181,7 @@
             this.Name = "RegistroMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro de marcas";
-            this.Load += new System.EventHandler(this.RegistroMarca_Load);
+            //this.Load += new System.EventHandler(this.RegistroMarca_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

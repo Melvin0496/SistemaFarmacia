@@ -206,10 +206,10 @@ namespace BillEasy0._1._0
                 EliminarButton.Enabled = false;
         }
 
-        private void RegistroMarca_Load(object sender, EventArgs e)
-        {
-            VisibleButtonEliminar();
-        }
+       // private void RegistroMarca_Load(object sender, EventArgs e)
+        //{
+          //  VisibleButtonEliminar();
+       // }
 
         private void MarcaIdTextBox_TextChanged(object sender, EventArgs e)
         {

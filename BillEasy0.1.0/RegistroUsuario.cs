@@ -214,10 +214,10 @@ namespace BillEasy0._1._0
         {
             VisibleButtonEliminar();
         }
-        private void RegistroUsuario_Load(object sender, EventArgs e)
+        /*private void RegistroUsuario_Load(object sender, EventArgs e)
         {
             VisibleButtonEliminar();
-        }
+        }*/
 
         private void VisibleButtonEliminar()
         {
@@ -225,6 +225,11 @@ namespace BillEasy0._1._0
                 EliminarButton.Enabled = true;
             else
                 EliminarButton.Enabled = false;
+        }
+
+        private void RegistroUsuario_Load_1(object sender, EventArgs e)
+        {
+            EliminarButton.Enabled = false;
         }
     }
 }
